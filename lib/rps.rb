@@ -8,8 +8,10 @@ class RPS
       return true
     elsif (player1 == 'paper') && (player2 == "rock")
       return true
-    else (player1 == 'scissors') && (player2 == "paper")
+    elsif (player1 == 'scissors') && (player2 == "paper")
       return true
+    elsif player1 == player2
+      return nil      
     end
   end
 end

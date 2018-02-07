@@ -13,5 +13,9 @@ describe('#rps') do
   it('returns true if scissors is the object and paper is the argument') do
     game = RPS.new()
     expect(game.wins?("scissors", "paper")).to(eq(true))
-end
+  end
+  it('returns nil if it is a tie') do
+    game = RPS.new()
+    expect(game.wins?("rock", "rock")).to(eq(nil))
+  end
 end
