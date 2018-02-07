@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 module RPS
-  def wins(player1, player2)
-    if (player1 == 'rock') && (player2 == 'scissors')
+  def wins(player1, computer)
+    if (player1 == 'rock') && (computer== 'scissors')
       return "Human Wins"
-    elsif (player1 == 'paper') && (player2 == "rock")
+    elsif (player1 == 'paper') && (computer == "rock")
       return "Human Wins"
-    elsif (player1 == 'scissors') && (player2 == "paper")
+    elsif (player1 == 'scissors') && (computer == "paper")
       return "Human Wins"
-    elsif player1 == player2
+    elsif player1 == computer
       return "Tie Game!"
     else
       return "Computer is the Winner"
@@ -29,7 +29,7 @@ class Game
     puts wins(@player1_choice, @computer_choice)
   end
 end
-# choice = ""
+human_choice = ""
 until  human_choice == "rock" || human_choice == "paper" || human_choice == "scissors"
   puts 'Pick Rock Paper or Scissors?'
   human_choice = gets.chomp.downcase
